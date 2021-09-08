@@ -1,0 +1,49 @@
+# string sort return string
+
+# string.split()
+# sort list
+# sort reverse
+# fstring
+
+#'9 6 2 5 88 -2'
+
+def highLowSort(numbers):
+    temp = numbers.split(' ')
+    temp2 =[]
+    #issue with sorting strings in list, think it's due to value of string look that up?
+    #change all the strings to int, but check in for type, convert, append to new list
+    #
+    #print('Temp:', temp)
+    for t in temp:
+        #index = temp.index(t)
+        #print(index, t)
+        if type(t) != int:
+            #print(t)
+            ty = int(t)
+            temp2.append(ty)
+            #print('temp B: ',temp)
+            #temp.pop(t)
+            #print('temp A: ', temp)
+            #print(temp)
+    #for t in temp:
+     #   if type(t) == str:
+      #      temp.remove(t)
+    #sort the list, list sorted low to high use reverse=true for high low
+
+    #get rid of new list replace values
+    #append, get index, remove index
+    #left with index issues so
+    #this:Temp: ['9', '5', '4', '6', '-2', '21']
+    # becomes this: ['5', '6', '21', 9, 5, 4, 6, -2, 21]
+    #remove the first item at index 0, index 0 in now '5
+    # for loop is on index 1 so will skip 5
+    # use a while loop? or just use a second empty list temp 2
+
+    temp2.sort(reverse=True)
+    #sort error, can't sort item of different type, in the case str and int
+    return temp2
+
+
+
+print(highLowSort('9 5 4 6 -2 21'))
+
